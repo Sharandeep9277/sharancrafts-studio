@@ -14,6 +14,7 @@ const eslintConfig = [
   {
     rules: {
       "react/no-unescaped-entities": "off",  // 🔥 Turn off the annoying rule here
+      "react/jsx-no-comment-textnodes": "off"
     },
   },
 ];
