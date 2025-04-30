@@ -73,7 +73,7 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <section className="py-32 bg-[#121212] relative overflow-hidden" ref={containerRef}>
+    <section className="py-16 md:py-32 bg-[#121212] relative overflow-hidden" ref={containerRef}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-10"></div>
@@ -100,20 +100,20 @@ export default function ExperiencesSection() {
         ))}
         
         {/* Glowing accent */}
-        <div className="absolute -bottom-40 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-10 mb-70"></div>
+        <div className="absolute -bottom-40 left-1/2 transform -translate-x-1/2 w-56 md:w-96 h-56 md:h-96 bg-blue-500 rounded-full filter blur-3xl opacity-10 mb-70"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : -20 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-24"
+          className="text-center mb-12 md:mb-24"
         >
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-indigo-600 to-teal-500 text-transparent bg-clip-text inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-500 via-indigo-600 to-teal-500 text-transparent bg-clip-text inline-block">
             Temporal Experience Matrix
           </h2>
-          <p className="text-[#C5C5C5] max-w-2xl mx-auto">
+          <p className="text-[#C5C5C5] max-w-2xl mx-auto text-sm md:text-base">
             Navigate through my career timeline - each node represents a stepping stone in my professional evolution.
           </p>
         </motion.div>
@@ -124,8 +124,8 @@ export default function ExperiencesSection() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Central line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full glow"></div>
+          {/* Central line - hidden on mobile, visible on md+ */}
+          <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full glow"></div>
           
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;
@@ -174,7 +174,10 @@ function TimelineItem({ experience, index, isEven, itemVariants }) {
     <motion.div
       ref={itemRef}
       variants={itemVariants}
-      className={`flex items-center mb-24 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}
+      className={`flex mb-12 md:mb-24 ${
+        // On mobile, always keep the same layout. On desktop, alternate
+        isEven ? 'flex-row' : 'flex-row md:flex-row-reverse'
+      }`}
       style={{
         opacity,
         scale,
@@ -184,42 +187,47 @@ function TimelineItem({ experience, index, isEven, itemVariants }) {
       {/* Center node */}
       <div className="relative flex-shrink-0 z-10">
         <motion.div 
-          className={`w-16 h-16 rounded-full bg-[#1E1E1E] flex items-center justify-center border-2 bg-gradient-to-r ${gradientClass}`}
+          className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1E1E1E] flex items-center justify-center border-2 bg-gradient-to-r ${gradientClass}`}
           whileHover={{ scale: 1.1, rotate: 90 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          {experience.icon}
+          <div className="md:text-base text-sm">
+            {experience.icon}
+          </div>
         </motion.div>
       </div>
       
       {/* Content card */}
       <motion.div 
-        className={`w-5/12 ${isEven ? 'mr-12' : 'ml-12'}`}
+        className={`w-3/4 sm:w-4/5 md:w-5/12 ${
+          // Consistent margin on mobile, alternating on desktop
+          isEven ? 'ml-4 sm:ml-6 md:mr-12' : 'ml-4 sm:ml-6 md:ml-12'
+        }`}
         whileHover={{ scale: 1.02 }}
       >
-        <div className="bg-[#1E1E1E] rounded-lg p-6 shadow-lg backdrop-blur-sm border border-gray-800 relative overflow-hidden">
+        <div className="bg-[#1E1E1E] rounded-lg p-4 md:p-6 shadow-lg backdrop-blur-sm border border-gray-800 relative overflow-hidden">
           {/* Glowing accent */}
           <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass} opacity-5 rounded-lg`}></div>
           
-          {/* Tech decoration */}
-          <div className="absolute top-2 right-2">
+          {/* Tech decoration - hidden on mobile */}
+          <div className="absolute top-2 right-2 hidden md:block">
             <FiHexagon className="text-gray-700" size={32} />
           </div>
           
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 md:mb-4">
+            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text mb-2 sm:mb-0">
               {experience.role}
             </h3>
-            <span className={`text-${experience.color === 'error' ? 'red' : experience.color}-500 text-sm font-medium px-3 py-1 rounded-full bg-gray-800`}>
+            <span className={`text-${experience.color === 'error' ? 'red' : experience.color}-500 text-xs md:text-sm font-medium px-2 py-1 rounded-full bg-gray-800 inline-block sm:ml-2 w-fit`}>
               {experience.period}
             </span>
           </div>
           
-          <h4 className={`text-${experience.color === 'error' ? 'red' : experience.color}-500 mb-3 text-lg font-medium`}>
+          <h4 className={`text-${experience.color === 'error' ? 'red' : experience.color}-500 mb-2 md:mb-3 text-base md:text-lg font-medium`}>
             {experience.organization}
           </h4>
           
-          <p className="text-[#C5C5C5] leading-relaxed">
+          <p className="text-[#C5C5C5] leading-relaxed text-sm md:text-base">
             {experience.description}
           </p>
           
