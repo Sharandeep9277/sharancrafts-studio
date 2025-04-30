@@ -14,7 +14,7 @@ export default function PortfolioSection() {
       description: "A full-stack platform connecting students with tutors, built with Next.js and MongoDB.",
       longDescription: "AssignTutors is an advanced matching platform that uses AI algorithms to pair students with the perfect tutors based on learning style, subject matter expertise, and scheduling compatibility. The application features real-time video conferencing, interactive whiteboards, and a comprehensive resource library.",
       tech: ["Next.js", "MongoDB", "WebRTC", "TailwindCSS"],
-      projectUrl: "https://assigntutors.example.com"
+      projectUrl: "https://assigntutors.com"
     },
     {
       title: "Think Again Academy",
@@ -22,7 +22,7 @@ export default function PortfolioSection() {
       description: "Educational platform featuring interactive learning experiences and resources.",
       longDescription: "Think Again Academy reimagines online education with immersive, gamified learning journeys. The platform adapts to individual learning patterns and provides personalized pathways through complex subjects. Features include 3D concept visualization, progress tracking, and community challenges.",
       tech: ["React", "Three.js", "GraphQL", "Firebase"],
-      projectUrl: "https://thinkagain.example.com"
+      projectUrl: "https://academy.thinkagainlab.com"
     },
     {
       title: "Roadyssey",
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
       description: "Complete brand identity and logo design for a travel-focused company.",
       longDescription: "Roadyssey required a visual language that captured the excitement of spontaneous travel while maintaining a premium feel. The brand identity includes a dynamic logo system that changes based on destination, a custom icon set representing global landmarks, and a responsive design system for all digital touchpoints.",
       tech: ["Illustrator", "Photoshop", "After Effects", "Figma"],
-      projectUrl: "https://roadyssey.example.com"
+      projectUrl: "https://www.canva.com/design/DAGE06UZ9bY/YzIDEqhb9MlycFS6lmnm9Q/edit?utm_content=DAGE06UZ9bY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
     },
     {
       title: "Augment Yogi",
@@ -38,7 +38,7 @@ export default function PortfolioSection() {
       description: "Modern logo and visual assets for a wellness and technology brand.",
       longDescription: "Augment Yogi bridges the gap between ancient wellness practices and cutting-edge technology. The visual identity uses sacred geometry and digital elements to create a harmonious balance. The brand system includes animated logo variations, AR experience design, and a comprehensive style guide.",
       tech: ["Photoshop", "Illustrator", "Blender", "Unity"],
-      projectUrl: "https://augmentyogi.example.com"
+      projectUrl: "https://www.canva.com/design/DAGE06UZ9bY/YzIDEqhb9MlycFS6lmnm9Q/edit?utm_content=DAGE06UZ9bY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
     },
     {
       title: "Event After-movie",
@@ -46,16 +46,16 @@ export default function PortfolioSection() {
       description: "Dynamic recap video showcasing highlights from a tech conference.",
       longDescription: "This after-movie for FutureTech Conference 2024 captures the energy and innovation of the event through kinetic typography, dynamic transitions, and atmospheric sound design. The narrative structure builds from keynote highlights to networking moments, culminating in a powerful call to action for next year's event.",
       tech: ["Premiere Pro", "After Effects", "DaVinci Resolve", "Audition"],
-      projectUrl: "https://vimeo.com/example"
+      projectUrl: "https://www.youtube.com/watch?v=khmlB6MNFGk"
     },
-    {
-      title: "Product Demo",
-      category: "Video Editing",
-      description: "Engaging demonstration video created with Premiere Pro and After Effects.",
-      longDescription: "This product demonstration for NeoSense AR Glasses showcases the device's capabilities through a combination of real footage and motion graphics. The video utilizes 3D tracking, clean UI animations, and seamless transitions to highlight features without overwhelming the viewer. Special attention was paid to sound design to enhance the futuristic feel.",
-      tech: ["After Effects", "Cinema 4D", "Premiere Pro", "Mocha Pro"],
-      projectUrl: "https://youtube.com/example"
-    }
+    // {
+    //   title: "Product Demo",
+    //   category: "Video Editing",
+    //   description: "Engaging demonstration video created with Premiere Pro and After Effects.",
+    //   longDescription: "This product demonstration for NeoSense AR Glasses showcases the device's capabilities through a combination of real footage and motion graphics. The video utilizes 3D tracking, clean UI animations, and seamless transitions to highlight features without overwhelming the viewer. Special attention was paid to sound design to enhance the futuristic feel.",
+    //   tech: ["After Effects", "Cinema 4D", "Premiere Pro", "Mocha Pro"],
+    //   projectUrl: "https://youtube.com/example"
+    // }
   ];
 
   const categoryColors = {
