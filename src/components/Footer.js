@@ -54,11 +54,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="text-indigo-400 mr-2 flex-shrink-0" />
-                <span className="text-gray-300 text-sm sm:text-base">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm sm:text-base">+91 98001 59277</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={16} className="text-indigo-400 mr-2 mt-1 flex-shrink-0" />
-                <span className="text-gray-300 text-sm sm:text-base">123 Digital Avenue<br />San Francisco, CA 94107</span>
+                <span className="text-gray-300 text-sm sm:text-base">Kolkata - 700094</span>
               </li>
             </ul>
           </div>
