@@ -21,7 +21,7 @@ export default function ServicesSection() {
         "Responsive web design",
         "Interactive UI/UX"
       ],
-      price: "₹50k - ₹150k",
+      price: "₹50,000",
       color: "blue"
     },
     design: {
@@ -34,7 +34,7 @@ export default function ServicesSection() {
         "Social media graphics",
         "Print materials"
       ],
-      price: "₹4k - ₹30k",
+      price: "₹4,000",
       color: "teal"
     },
     video: {
@@ -47,7 +47,7 @@ export default function ServicesSection() {
         "Demo videos",
         "Motion graphics"
       ],
-      price: "₹5k - ₹35k",
+      price: "₹5,000",
       color: "indigo"
     }
   };
